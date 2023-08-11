@@ -9,11 +9,11 @@ class Solution {
         pair <int, int> left = Diameter(root->left);
         pair<int, int> right = Diameter(root->right);
         
-        int value1 = left.first;
-        int value2 = right.first;
-        int value3 = left.second + right.second + 1;
+        int diameter1 = left.first;
+        int diameter2 = right.first;
+        int diameter3 = left.second + right.second + 1;
         
-        return {max(max(value1, value2), value3), max(left.second, right.second) + 1};
+        return {max(max(diameter1, diameter2), diameter3), max(left.second, right.second) + 1};
     }
     
     int diameter(Node* root) {
